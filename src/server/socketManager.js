@@ -1,13 +1,14 @@
-import productModel from "./models/products.model.js";
-import messageModel from "./models/messages.model.js";
+import productModel from "../../dao/models/products.model.js";
+import messageModel from "../../dao/models/messages.model.js";
 
 const socketManager = (socketServer) => {
     socketServer.on("connection", (socket) => {
         console.log("Cliente conectado");
-
+        ssss
         socket.on("newProduct", async (data) => {
             data.price = parseInt(data.price);
             data.stock = parseInt(data.stock);
+
 
             await productModel.create(data);
         });

@@ -9,7 +9,7 @@ import cartsRouter from "./routes/carts.router.js"
 import viewsRouter from "./routes/views.router.js";
 import __dirname from "./utils.js";
 import multer from "multer";
-
+import express_static from "express-static";
 
 const app = express();
 
