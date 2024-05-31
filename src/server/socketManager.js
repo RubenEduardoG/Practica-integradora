@@ -1,5 +1,5 @@
-import productModel from "../../dao/models/products.model.js";
-import messageModel from "../../dao/models/messages.model.js";
+import productModel from "../dao/models/products.model.js";
+import messageModel from "../dao/models/massage.model.js";
 
 const socketManager = (socketServer) => {
     socketServer.on("connection", (socket) => {
