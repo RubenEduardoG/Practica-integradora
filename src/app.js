@@ -11,6 +11,7 @@ import __dirname from "./utils.js";
 import multer from "multer";
 import express_static from "express-static";
 
+
 const app = express();
 
 const PORT = 8080;
@@ -20,7 +21,7 @@ dotenv.config();
 app.use(multer().none());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express_static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public"));
 
 mongoose.connect(process.env.MONGO_URL)
     .then(() => { console.log("Conectado a la base de datos") })
